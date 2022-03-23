@@ -1,0 +1,13 @@
+<p>artists works!</p>
+<div>
+    id: {{artist.artist_id}}<br/>
+    name: {{artist.name}}
+</div>
+<div>
+    <label for="artist">Edit name: </label>
+    <input id="name" [(ngModel)]="artist.name">
+</div>
+
+<ul class="artists">
+    <li *ngFor="let artist of artists">{{artist.artist_id}}: {{artist.name}}</li>
+</ul>
