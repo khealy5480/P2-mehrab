@@ -1,11 +1,18 @@
 <p>artists works!</p>
-<div>
+<!-- <div>
     id: {{artist.artist_id}}<br/>
     name: {{artist.name}}
 </div>
 <div>
     <label for="artist">Edit name: </label>
     <input id="name" [(ngModel)]="artist.name">
+</div> -->
+
+<div>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        New Artist: <input type="text" formControlName="name"/>
+        <button class="button" type="submit" [disabled]="!userForm.valid">Add</button>
+    </form>
 </div>
 
 <ul class="artists">

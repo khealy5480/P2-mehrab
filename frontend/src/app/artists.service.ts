@@ -11,5 +11,9 @@ export class ArtistsService {
     return this.http.get<Artist[]>('http://localhost:8081/artists')
   }
 
+  postArtist(artist: Artist) {
+    return this.http.post('http://localhost:8081/artists', artist);
+  }
+
   constructor(private http: HttpClient) { }
 }
