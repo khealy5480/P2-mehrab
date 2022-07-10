@@ -6,9 +6,17 @@ plugins {
 	id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
+
 group = 'com.revature.MusicApplication'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+jar {
+	manifest {
+		attributes( 'Main-Class': 'com.revature.MusicApplication')
+
+	}
+}
 
 repositories {
 	mavenCentral()
