@@ -7,19 +7,21 @@ plugins {
 	id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
-
 group = 'com.revature.MusicApplication'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+//
+//bootJar {
+//	manifest {
+//		mainClassName = 'com.revature.music.MusicApplication'
+//	}
+//}
 
 bootJar {
 	manifest {
-		attributes 'Start-Class': 'com.example.ExampleApplication'
+		attributes 'Start-Class': 'com.revature.music.MusicApplication'
 	}
 }
-//bootJar {
-//	mainClassName = 'com.example.ExampleApplication'
-//}
 
 repositories {
 	mavenCentral()
@@ -35,3 +37,4 @@ dependencies {
 //tasks.named('test') {
 //	useJUnitPlatform()
 //}
+def void manifest(groovy.lang.Closure closure) {}
