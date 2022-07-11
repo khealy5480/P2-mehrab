@@ -5,23 +5,27 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'com.github.johnrengelman.shadow' version '7.1.2'
+	id 'application'
 }
 
 group = 'com.revature.MusicApplication'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
-//
-//bootJar {
-//	manifest {
-//		mainClassName = 'com.revature.music.MusicApplication'
-//	}
-//}
 
 bootJar {
-	manifest {
-		attributes 'Start-Class': 'com.revature.music.MusicApplication'
+	manifest() {
+		mainClassName = 'com.revature.music.MusicApplication'
 	}
 }
+
+jar {
+	enabled = true
+}
+//bootJar {
+//	manifest {
+//		attributes 'Start-Class': 'com.revature.music.MusicApplication'
+//	}
+//}
 
 repositories {
 	mavenCentral()
