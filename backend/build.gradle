@@ -13,19 +13,21 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 bootJar {
-	manifest() {
+
 		mainClassName = 'com.revature.music.MusicApplication'
-	}
+
 }
 
-jar {
-	enabled = true
-}
 //bootJar {
 //	manifest {
 //		attributes 'Start-Class': 'com.revature.music.MusicApplication'
 //	}
 //}
+
+jar {
+	enabled = true
+}
+
 
 repositories {
 	mavenCentral()
@@ -42,3 +44,5 @@ dependencies {
 //	useJUnitPlatform()
 //}
 def void manifest(groovy.lang.Closure closure) {}
+
+//java.lang.IllegalArgumentException: No auto configuration classes found in META-INF/spring.factories. If you are using a custom packaging, make sure that file is correct.
