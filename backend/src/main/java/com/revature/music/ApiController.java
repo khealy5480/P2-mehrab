@@ -12,6 +12,6 @@ public class ApiController {
 
     @GetMapping("/api")
     public Artist api() {
-        return restTemplate.getForObject("http://20.228.132.7:8081/artists/1", Artist.class);
+        return restTemplate.getForObject("http://20.228.132.7/artists/1", Artist.class);
     }
 }
